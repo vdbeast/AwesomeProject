@@ -1,9 +1,14 @@
 import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
+    fullContainer: {
+        flex: 1
+    },
     container: {
         backgroundColor: '#fff',
         height: '100%',
+        flex: 1,
+        justifyContent: 'space-around',
     },
     background: {
         height: '100%'
@@ -12,7 +17,8 @@ const style = StyleSheet.create({
         backgroundColor: '#fff',
         height: '68%',
         marginTop: 'auto',
-        borderRadius: '25px, 25px, 0px, 0px',
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
         width: '100%',
         display: 'flex',
     },
