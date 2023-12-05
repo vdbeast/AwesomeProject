@@ -32,10 +32,10 @@ const LoginScreen = () => {
     }
 
     return (
-                <View style={style.container}>
-                    <ImageBackground source={backgroundImg} style={style.background}>
         <TouchableWithoutFeedback onPress={handleKeyboardHide}>
-            <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}>
+            <View style={style.container}>
+                <ImageBackground source={backgroundImg} style={style.background}>
+                    <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={style.fullContainer}>
                         <View style={style.contentWrapper}>
                             <Text style={style.title}>Увійти</Text>
                             <TextInput style={{ ...style.input, borderColor: focused === 'email' ? '#ff6c00' : '#e8e8e8', backgroundColor: focused === 'email' ? '#ffffff' : '#f6f6f6' }}
@@ -62,10 +62,10 @@ const LoginScreen = () => {
                                 <Text style={style.linkText}>Немає акаунту? Зареєструватися</Text>
                             </TouchableOpacity>
                         </View>
-            </KeyboardAvoidingView>
+                    </KeyboardAvoidingView>
+                </ImageBackground>  
+            </View>
         </TouchableWithoutFeedback>
-                    </ImageBackground>  
-                </View>
     )
 }
 
