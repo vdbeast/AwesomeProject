@@ -1,8 +1,12 @@
 import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
+    fullContainer: {
+        flex: 1
+    },
     container: {
         backgroundColor: '#fff',
+        flex: 1,
         height: '100%',
     },
     background: {
@@ -10,9 +14,10 @@ const style = StyleSheet.create({
     },
     contentWrapper: {
         backgroundColor: '#fff',
-        height: '68%',
+        height: '60%',
         marginTop: 'auto',
-        borderRadius: '25px, 25px, 0px, 0px',
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
         width: '100%',
         display: 'flex',
     },
@@ -38,7 +43,7 @@ const style = StyleSheet.create({
         borderColor: '#e8e8e8',
         borderRadius: 8,
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
     },
     loginBtn: {
         alignItems: 'center',
