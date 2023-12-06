@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const RegistrationScreen = () => {
     const [avatar, setAvatar] = useState(null);
-    const [text, setText] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [focused, setFocused] = useState(false);
@@ -48,8 +48,8 @@ const RegistrationScreen = () => {
                             <Text style={style.title}>Реєстрація</Text>
                             <TextInput style={{ ...style.input, borderColor: focused === 'name' ? '#ff6c00' : '#e8e8e8', backgroundColor: focused === 'name' ? '#ffffff' : '#f6f6f6' }}
                                 placeholder="Логін"
-                                value={text}
-                                onChangeText={setText}
+                                value={name}
+                                onChangeText={setName}
                                 onFocus={() => handleFocus('name')}
                             />
                             <TextInput style={{ ...style.input, borderColor: focused === 'email' ? '#ff6c00' : '#e8e8e8', backgroundColor: focused === 'email' ? '#ffffff' : '#f6f6f6' }}
