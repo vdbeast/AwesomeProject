@@ -3,6 +3,7 @@ import style from "./RegistrationScreen.styled";
 import backgroundImg from "../assets/background.png";
 import addPhotoImg from "../assets/addPhoto.png"
 import { useState } from "react";
+import { useNavigation } from '@react-navigation/native';
 
 const RegistrationScreen = () => {
     const [avatar, setAvatar] = useState(null);
@@ -11,6 +12,8 @@ const RegistrationScreen = () => {
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [focused, setFocused] = useState(false);
+    
+    const navigation = useNavigation();
 
     const clearForm = () => {
         setName('');
@@ -81,7 +84,7 @@ const RegistrationScreen = () => {
                         <TouchableOpacity style={style.registBtn} onPress={onRegistration}>
                             <Text style={style.registBtnTitle}>Зареєструватися</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={style.link}>
+                        <TouchableOpacity style={style.link} onPress={() => navigation.navigate("Login")}>
                             <Text style={style.linkText}>Вже є акаунт? Увійти</Text>
                         </TouchableOpacity>
                         </View>

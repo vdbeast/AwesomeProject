@@ -2,11 +2,14 @@ import { Text, View, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoid
 import style from "./LoginScreen.styled";
 import backgroundImg from "../assets/background.png";
 import { useState } from "react";
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [focused, setFocused] = useState(false);
+
+    const navigation = useNavigation();
 
     const clearForm = () => {
         setEmail('');
@@ -58,7 +61,7 @@ const LoginScreen = () => {
                             <TouchableOpacity style={style.loginBtn} onPress={onLogin}>
                                 <Text style={style.loginBtnTitle}>Увійти</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={style.link}>
+                            <TouchableOpacity style={style.link} onPress={() => navigation.navigate("Registration")}>
                                 <Text style={style.linkText}>Немає акаунту? Зареєструватися</Text>
                             </TouchableOpacity>
                         </View>
