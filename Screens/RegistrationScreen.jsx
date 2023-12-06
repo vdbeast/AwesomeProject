@@ -9,6 +9,7 @@ const RegistrationScreen = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const [focused, setFocused] = useState(false);
 
     const clearForm = () => {
@@ -33,6 +34,10 @@ const RegistrationScreen = () => {
     const handleKeyboardHide = () => {
         setFocused('');
         Keyboard.dismiss;
+    }
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword)
     }
 
     return (
@@ -60,14 +65,17 @@ const RegistrationScreen = () => {
                             />
                             <View style={style.passwordWrapper}>
                                 <TextInput style={{ ...style.input, borderColor: focused === 'password' ? '#ff6c00' : '#e8e8e8', backgroundColor: focused === 'password' ? '#ffffff' : '#f6f6f6' }}
+                                    secureTextEntry={!showPassword}
                                     placeholder="Пароль"
                                     value={password}
                                     onChangeText={setPassword}
                                     onFocus={() => handleFocus('password')}
                                 />
-                                <TouchableOpacity style={style.btnShow}>
-                                  <Text style={style.showPasswordTitle}>Показати</Text>
-                                </TouchableOpacity>
+                                    <TouchableOpacity style={style.btnShow} onPress={toggleShowPassword}>
+                                        <Text style={style.showPasswordTitle}>
+                                            {showPassword ? 'Приховати' : 'Показати'}
+                                        </Text>
+                                    </TouchableOpacity>
                             </View>
                         </View>
                         <TouchableOpacity style={style.registBtn} onPress={onRegistration}>
