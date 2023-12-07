@@ -84,9 +84,12 @@ const RegistrationScreen = () => {
                         <TouchableOpacity style={style.registBtn} onPress={onRegistration}>
                             <Text style={style.registBtnTitle}>Зареєструватися</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={style.link} onPress={() => navigation.navigate("Login")}>
-                            <Text style={style.linkText}>Вже є акаунт? Увійти</Text>
-                        </TouchableOpacity>
+                            <View style={style.link_wrapper}>
+                                <Text style={style.link_wrapper_text}>Вже є акаунт?&nbsp;</Text>
+                                <TouchableOpacity style={style.link} onPress={() => navigation.navigate("Login")}>
+                                    <Text style={style.linkText}>Увійти</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </KeyboardAvoidingView>
                 </ImageBackground>  

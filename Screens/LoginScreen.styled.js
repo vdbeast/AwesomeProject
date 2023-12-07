@@ -55,9 +55,15 @@ const style = StyleSheet.create({
         marginRight: 'auto',
         marginBottom: 14
     },
-    link: {
+    link_wrapper: {
+        display: "flex",
+        flexDirection: "row",
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto' 
+    },
+    link: {
+        display: "flex",
+        alignItems: "center",
     },
     btnShow: {
         position: 'absolute',
@@ -70,8 +76,12 @@ const style = StyleSheet.create({
     loginBtnTitle: {
         color: '#ffffff'
     },
-    linkText: {
+    link_wrapper_text: {
         color: '#1B4371'
+    },
+    linkText: {
+        color: '#1B4371',
+        textDecorationLine: "underline"
     }
 })
 
