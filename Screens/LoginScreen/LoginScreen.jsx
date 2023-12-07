@@ -1,6 +1,6 @@
 import { Text, View, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform } from "react-native";
 import style from "./LoginScreen.styled";
-import backgroundImg from "../assets/background.png";
+import backgroundImg from "../../assets/background.png";
 import { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
 

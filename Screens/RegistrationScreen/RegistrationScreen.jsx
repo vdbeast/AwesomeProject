@@ -1,7 +1,7 @@
 import { Text, View, ImageBackground, Image, TextInput, TouchableOpacity, TouchableWithoutFeedback, KeyboardAvoidingView, Keyboard, Platform} from "react-native";
 import style from "./RegistrationScreen.styled";
-import backgroundImg from "../assets/background.png";
-import addPhotoImg from "../assets/addPhoto.png"
+import backgroundImg from "../../assets/background.png";
+import addPhotoImg from "../../assets/addPhoto.png"
 import { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
 
