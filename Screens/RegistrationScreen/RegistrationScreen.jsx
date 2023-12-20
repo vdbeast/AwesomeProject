@@ -25,6 +25,8 @@ const RegistrationScreen = () => {
         if (!name || !email|| !password)
             return console.warn('Заповніть будь-ласка поля')
         console.log({ name, email, password });
+        
+        navigation.navigate("Home");
 
         handleKeyboardHide();
         clearForm();

@@ -21,6 +21,8 @@ const LoginScreen = () => {
             return console.warn('Заповніть будь-ласка поля')
         console.log({ email, password });
 
+        navigation.navigate("Home");
+        
         handleKeyboardHide();
         clearForm();
     }
