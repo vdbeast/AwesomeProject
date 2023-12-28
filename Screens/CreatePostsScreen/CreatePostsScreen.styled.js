@@ -1,13 +1,14 @@
 import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
-    fullContainer: {
-        flex: 1
-    },
     container: {
         backgroundColor: '#fff',
+        width: "100%",
+        height: "100%"
+    },
+    contentContainer: {
         flex: 1,
-        height: '100%',
+        position: 'relative'
     },
     header: {
         height: 88,

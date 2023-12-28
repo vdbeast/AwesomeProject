@@ -1,27 +1,18 @@
-import { Button, Keyboard, KeyboardAvoidingView, Platform, Text, Touchable, TouchableOpacity, View } from "react-native"
-import style from './Home.styled'
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import { createStackNavigator } from "@react-navigation/stack";
+import CreatePostsScreen from "../CreatePostsScreen/CreatePostsScreen";
+import PostsScreen from "../PostsScreen/PostsScreen";
+
 
 const Home = () => {
-
-    const handleKeyboardHide = () => {
-        setFocused('');
-        Keyboard.dismiss;
-    }
+    
+    const HomeStack = createStackNavigator();
 
     return (
-        <TouchableWithoutFeedback onPress={handleKeyboardHide}>
-            <View style={style.container}>
-                <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={style.fullContainer}>
-                    <View style={style.header}>
-                        <View style={style.header_wrapper}>
-                            <Text style={style.title}>Публікації</Text>
-                        </View>
-                    </View> 
-                </KeyboardAvoidingView>
-            </View>
-        </TouchableWithoutFeedback>
-    )
+        <HomeStack.Navigator>
+            <HomeStack.Screen name="PostsScreen" component={PostsScreen} options={{ headerStyle: { height: 0 } }} />
+            <HomeStack.Screen name="CreatePostsScreen" component={CreatePostsScreen} options={{ headerStyle: { height: 0 } }} />
+        </HomeStack.Navigator>
+    );
 }
 
 export default Home;
