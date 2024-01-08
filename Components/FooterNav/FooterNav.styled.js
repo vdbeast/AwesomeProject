@@ -8,12 +8,25 @@ const style = StyleSheet.create({
         width: "100%",
         borderTopWidth: 1,
         borderTopColor: 'rgba(0, 0, 0, 0.3)',
+        padding: 10,
+        backgroundColor: "#fff"
+    },
+    footer_btns: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
+        alignItems: "center",
         gap: 31,
-        padding: 10,
-        backgroundColor: "#fff"
+    },
+    add_btn: {
+        color: "#fff",
+        width: 70,
+        height: 40,
+        backgroundColor: "rgba(255, 108, 0, 1)",
+        borderRadius: 20,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
     }
 })
 
