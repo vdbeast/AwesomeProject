@@ -1,4 +1,4 @@
-import { Keyboard, KeyboardAvoidingView, Platform, Text, View } from "react-native"
+import { Image, Keyboard, KeyboardAvoidingView, Platform, Text, TouchableOpacity, View } from "react-native"
 import style from './PostsScreen.styled'
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import FooterNav from "../../Components/FooterNav/FooterNav";
@@ -17,9 +17,24 @@ const PostsScreen = () => {
                         <View style={style.header_wrapper}>
                             <Text style={style.title}>Публікації</Text>
                         </View>
+                        <View>
+                            <View style={style.add_btn}>
+                                <Image
+                                    source={require('../../assets/grid.png')}
+                                    style={{ width: 13, height: 13 }}
+                                />
+                            </View>
+                        </View>
                     </View>
-                    <View>
-                        <Text style={style.title}>Автор</Text>
+                    <View style={style.profile_wrapper}>
+                        <Image
+                            source={require('../../assets/user.png')}
+                            style={style.image}
+                        />
+                        <View style={style.name_wrapper}>
+                            <Text style={style.name}>Natali Romanova</Text>
+                            <Text style={style.email}>email@example.com</Text>
+                        </View>
                     </View>
                     <FooterNav />
                 </KeyboardAvoidingView>
