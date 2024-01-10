@@ -1,12 +1,15 @@
 import { Text, View, ImageBackground, TextInput, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform } from "react-native";
 import style from "./LoginScreen.styled";
-import backgroundImg from "../assets/background.png";
+import backgroundImg from "../../assets/background.png";
 import { useState } from "react";
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [focused, setFocused] = useState(false);
+
+    const navigation = useNavigation();
 
     const clearForm = () => {
         setEmail('');
@@ -18,6 +21,8 @@ const LoginScreen = () => {
             return console.warn('Заповніть будь-ласка поля')
         console.log({ email, password });
 
+        navigation.navigate("Home");
+        
         handleKeyboardHide();
         clearForm();
     }
@@ -58,9 +63,12 @@ const LoginScreen = () => {
                             <TouchableOpacity style={style.loginBtn} onPress={onLogin}>
                                 <Text style={style.loginBtnTitle}>Увійти</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={style.link}>
-                                <Text style={style.linkText}>Немає акаунту? Зареєструватися</Text>
-                            </TouchableOpacity>
+                            <View style={style.link_wrapper}>
+                                <Text style={style.link_wrapper_text}>Немає акаунту?&nbsp;</Text>
+                                <TouchableOpacity style={style.link} onPress={() => navigation.navigate("Registration")}>
+                                    <Text style={style.linkText}>Зареєструватися</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </KeyboardAvoidingView>
                 </ImageBackground>  

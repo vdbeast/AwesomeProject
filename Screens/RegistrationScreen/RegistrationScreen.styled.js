@@ -6,20 +6,30 @@ const style = StyleSheet.create({
     },
     container: {
         backgroundColor: '#fff',
-        flex: 1,
         height: '100%',
+        flex: 1,
+        justifyContent: 'space-around',
     },
     background: {
         height: '100%'
     },
     contentWrapper: {
         backgroundColor: '#fff',
-        height: '60%',
+        height: '68%',
         marginTop: 'auto',
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         width: '100%',
         display: 'flex',
+    },
+    avatarWrapper: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+    },
+    addPhotoImg: {
+        top: '-40%',
+        margin: 0
     },
     title: {
         fontStyle: 'normal', 
@@ -29,7 +39,6 @@ const style = StyleSheet.create({
         textAlign: 'center',
         color: '#212121',
         marginBottom: 24,
-        marginTop: 24,
     },
     input: {
         height: 50,
@@ -43,9 +52,9 @@ const style = StyleSheet.create({
         borderColor: '#e8e8e8',
         borderRadius: 8,
         marginLeft: 'auto',
-        marginRight: 'auto',
+        marginRight: 'auto'
     },
-    loginBtn: {
+    registBtn: {
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#ff6c00',
@@ -55,9 +64,15 @@ const style = StyleSheet.create({
         marginRight: 'auto',
         marginBottom: 14
     },
-    link: {
+    link_wrapper: {
+        display: "flex",
+        flexDirection: "row",
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto' 
+    },
+    link: {
+        display: "flex",
+        alignItems: "center",
     },
     btnShow: {
         position: 'absolute',
@@ -67,11 +82,15 @@ const style = StyleSheet.create({
     showPasswordTitle: {
         color: '#1B4371'
     },
-    loginBtnTitle: {
+    registBtnTitle: {
         color: '#ffffff'
     },
-    linkText: {
+    link_wrapper_text: {
         color: '#1B4371'
+    },
+    linkText: {
+        color: '#1B4371',
+        textDecorationLine: "underline"
     }
 })
 
