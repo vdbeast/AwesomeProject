@@ -1,7 +1,9 @@
-import { Keyboard, KeyboardAvoidingView, Platform, Text, View } from "react-native"
+import { Image, ImageBackground, Keyboard, KeyboardAvoidingView, Platform, Text, TouchableOpacity, View } from "react-native"
 import style from './ProfileScreen.styled'
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import FooterNav from "../../Components/FooterNav/FooterNav";
+import backgroundImg from "../../assets/background.png";
+import addPhotoImg from "../../assets/addPhoto.png"
 
 const ProfileScreen = () => {
 
@@ -12,17 +14,23 @@ const ProfileScreen = () => {
     return (
         <TouchableWithoutFeedback onPress={handleKeyboardHide}>
             <View style={style.container}>
-                <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={style.contentContainer}>
-                    <View style={style.header}>
-                        <View style={style.header_wrapper}>
-                            <Text style={style.title}>Публікації</Text>
+                <ImageBackground source={backgroundImg} style={style.background}>
+                    <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={style.fullContainer}>
+                        <View style={style.contentWrapper}>
+                            <View style={style.avatarWrapper}>
+                                <Image source={addPhotoImg} style={style.addPhotoImg}/>
+                            </View>
+                            <View style={style.logout_btn}>
+                                <Image
+                                    source={require('../../assets/log_out.png')}
+                                    style={style.logout_icon}
+                                />
+                            </View>
+                            <Text style={style.title}>Natali Romanova</Text>
                         </View>
-                    </View>
-                    <View>
-                        <Text style={style.title}>Profile</Text>
-                    </View>
-                    <FooterNav />
-                </KeyboardAvoidingView>
+                        <FooterNav />
+                    </KeyboardAvoidingView>
+                </ImageBackground>  
             </View>
         </TouchableWithoutFeedback>
     )

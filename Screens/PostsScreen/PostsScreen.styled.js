@@ -22,6 +22,36 @@ const style = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     }, 
+    logout_btn: {
+        marginTop: -35,
+        marginLeft: "auto",
+        marginRight: 10
+    },
+    logout_icon: {
+        width: 24,
+        height: 24
+    },
+    profile_wrapper: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    image: {
+        width: 60,
+        height: 60
+    },
+    name: {
+        fontSize: 13,
+        fontWeight: 700,
+        lineHeight: 15,
+        color: "rgba(33, 33, 33, 1)"
+    },
+    email: {
+        fontSize: 11,
+        fontWeight: 400,
+        lineHeight: 13,
+        color: "rgba(33, 33, 33, 0.8)"
+    },
     title: {
         fontSize: 17,
         fontWeight: 500,

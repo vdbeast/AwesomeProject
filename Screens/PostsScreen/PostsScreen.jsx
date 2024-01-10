@@ -17,13 +17,11 @@ const PostsScreen = () => {
                         <View style={style.header_wrapper}>
                             <Text style={style.title}>Публікації</Text>
                         </View>
-                        <View>
-                            <View style={style.add_btn}>
-                                <Image
-                                    source={require('../../assets/grid.png')}
-                                    style={{ width: 13, height: 13 }}
-                                />
-                            </View>
+                        <View style={style.logout_btn}>
+                            <Image
+                                source={require('../../assets/log_out.png')}
+                                style={style.logout_icon}
+                            />
                         </View>
                     </View>
                     <View style={style.profile_wrapper}>

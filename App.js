@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import RegistrationScreen from './Screens/RegistrationScreen/RegistrationScreen';
@@ -9,6 +9,8 @@ import Home from './Screens/Home/Home';
 const MainStack = createStackNavigator();
 
 export default function App() {
+
+  StatusBar.setBarStyle('dark-content')
 
   return (
     <NavigationContainer>

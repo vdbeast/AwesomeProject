@@ -1,33 +1,52 @@
 import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
+    fullContainer: {
+        flex: 1
+    },
     container: {
         backgroundColor: '#fff',
-        width: "100%",
-        height: "100%"
+        height: '100%',
     },
-    contentContainer: {
-        flex: 1,
-        position: 'relative'
+    background: {
+        height: '100%'
     },
-    header: {
-        height: 88,
-        borderBottomWidth: 1,
-        borderBottomColor: 'rgba(0, 0, 0, 0.3)',
-        display: 'flex'
+    contentWrapper: {
+        backgroundColor: '#fff',
+        marginTop: 147,
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
+        width: '100%',
+        display: 'flex',
     },
-    header_wrapper: {
-        marginTop: 44,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    }, 
+    avatarWrapper: {
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+    },
+    addPhotoImg: {
+        top: '-40%',
+        margin: 0
+    },
+    logout_btn: {
+        marginTop: -85,
+        marginLeft: "auto",
+        marginRight: 10
+    },
+    logout_icon: {
+        width: 24,
+        height: 24
+    },
     title: {
-        fontSize: 17,
-        fontWeight: 500,
-        lineHeight: 22,
-        padding: 11
-    }
+        fontStyle: 'normal', 
+        fontWeight: 500,  
+        fontSize: 30,
+        lineHeight: 35,
+        textAlign: 'center',
+        color: '#212121',
+        marginBottom: 24,
+        marginTop: 40
+    },
 })
 
 export default style;
