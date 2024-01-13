@@ -4,6 +4,7 @@ import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import FooterNav from "../../Components/FooterNav/FooterNav";
 import backgroundImg from "../../assets/background.png";
 import addPhotoImg from "../../assets/addPhoto.png"
+import PhotoCardList from "../../Components/PhotoCardList/PhotoCardList";
 
 const ProfileScreen = () => {
 
@@ -27,6 +28,7 @@ const ProfileScreen = () => {
                                 />
                             </View>
                             <Text style={style.title}>Natali Romanova</Text>
+                            <PhotoCardList/>
                         </View>
                         <FooterNav />
                     </KeyboardAvoidingView>
