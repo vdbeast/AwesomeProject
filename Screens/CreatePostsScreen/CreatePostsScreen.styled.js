@@ -74,7 +74,7 @@ const style = StyleSheet.create({
     postBtn: {
         alignItems: 'center',
         padding: 16,
-        backgroundColor: 'rgba(246, 246, 246, 1)',
+        backgroundColor: '#ff6c00',
         borderRadius: 100,
         width: 343,
         marginLeft: 'auto',
