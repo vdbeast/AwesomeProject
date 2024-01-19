@@ -2,7 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import CreatePostsScreen from "../CreatePostsScreen/CreatePostsScreen";
 import PostsScreen from "../PostsScreen/PostsScreen";
 import ProfileScreen from "../ProfileScreen/ProfileScreen";
-import React from "react";
+import React, { useState } from "react";
 
 
 const Home = ({ navigation }) => {

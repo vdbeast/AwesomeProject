@@ -9,7 +9,7 @@ import PhotoCardList from "../../Components/PhotoCardList/PhotoCardList";
 const ProfileScreen = () => {
 
     const handleKeyboardHide = () => {
-        Keyboard.dismiss;
+        Keyboard.dismiss();
     }
 
     return (

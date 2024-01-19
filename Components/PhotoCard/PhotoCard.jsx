@@ -1,9 +1,10 @@
-import { Text, View } from "react-native"
+import { Text, View } from "react-native";
 
-const PhotoCard = () => {
+const PhotoCard = ({ title, location }) => {
     return (
         <View>
-            <Text>Hello world</Text>
+            <Text>Title: {title}</Text>
+            <Text>Location: {location}</Text>
         </View>
     )
 }

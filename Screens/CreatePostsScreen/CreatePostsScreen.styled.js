@@ -72,22 +72,27 @@ const style = StyleSheet.create({
         marginBottom: 14
     },
     postBtn: {
-        alignItems: 'center',
-        padding: 16,
-        backgroundColor: '#ff6c00',
-        borderRadius: 100,
-        width: 343,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: 20
-    },
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#ff6c00',
+    borderRadius: 100,
+    width: 343,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 20,
+    elevation: 3, // Забезпечує тінь (опціонально)
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3.84,
+},
     postBtnTitle: {
         fontSize: 16,
         fontWeight: 400,
         lineHeight: 19,
         letterSpacing: 0,
         textAlign: "left",
-        color: "rgba(189, 189, 189, 1)"
+        color: '#ffffff'
     },
     footer: {
         position: "absolute",

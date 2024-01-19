@@ -1,12 +1,14 @@
 import { Image, Keyboard, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, View } from "react-native"
 import style from './CreatePostsScreen.styled'
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const CreatePostsScreen = () => {
 
     const [title, setTitle] = useState('');
     const [location, setLocation] = useState('');
+
+    const navigation = useNavigation();
 
     const handleKeyboardHide = () => {
         Keyboard.dismiss();
@@ -20,8 +22,7 @@ const CreatePostsScreen = () => {
     const submitPhotoData = () => {
         if (!title || !location)
             return console.warn('Заповніть будь-ласка поля')
-        console.log({ title, location });
-        resetData()
+        navigation.navigate("ProfileScreen", { title, location })
     }
 
     const deletePhotoData = () => {
@@ -29,7 +30,7 @@ const CreatePostsScreen = () => {
     }
 
     return (
-        <TouchableWithoutFeedback onPress={handleKeyboardHide}>
+        <TouchableOpacity activeOpacity={1} onPress={handleKeyboardHide}>
             <View style={style.container}>
                 <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={style.subContainer}>
                     <View style={style.header}>
@@ -72,7 +73,7 @@ const CreatePostsScreen = () => {
                     </View>
                 </KeyboardAvoidingView>
             </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
     )
 }
 
