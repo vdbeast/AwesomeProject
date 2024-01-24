@@ -56,7 +56,7 @@ const style = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         justifyContent: 'center',
-        marginBottom: 3
+        marginBottom: 10
     },
     photo_logo_wrapper: {
         width: 60,
@@ -113,10 +113,25 @@ const style = StyleSheet.create({
     placeholderText: {
         color: "rgba(189, 189, 189, 1)",
     },
-    postBtn: {
+    postBtnActive: {
         alignItems: 'center',
         padding: 16,
         backgroundColor: '#ff6c00',
+        borderRadius: 100,
+        width: 343,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 20,
+        elevation: 3,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3.84,
+    },
+    postBtnPassive: {
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: 'rgba(232, 232, 232, 1)',
         borderRadius: 100,
         width: 343,
         marginLeft: 'auto',
@@ -160,7 +175,11 @@ const style = StyleSheet.create({
         borderRadius: 20,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3.84,
     }
 })
 

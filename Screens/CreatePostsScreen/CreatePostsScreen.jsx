@@ -33,16 +33,20 @@ const CreatePostsScreen = () => {
         navigation.goBack()
     }
 
+     const buttonStyle = title && location ? style.postBtnActive : style.postBtnPassive;
+
     return (
         <TouchableOpacity activeOpacity={1} onPress={handleKeyboardHide}>
             <View style={style.container}>
                 <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={style.subContainer}>
                     <View style={style.header}>
-                        <TouchableOpacity style={style.back_logo_wrapper} onPress={goBack}>
-                            <Image
-                                source={require('../../assets/arrow-left.png')}
-                                style={style.back_logo}
-                            />
+                        <TouchableOpacity onPress={goBack}>
+                            <View style={style.back_logo_wrapper}>
+                                <Image
+                                    source={require('../../assets/arrow-left.png')}
+                                    style={style.back_logo}
+                                />
+                            </View>
                         </TouchableOpacity>
                         <View style={style.header_wrapper}>
                             <Text style={style.title}>Створити публікацію</Text>
@@ -78,7 +82,7 @@ const CreatePostsScreen = () => {
                                 style={style.placeholder_icon}
                             />
                         </View>
-                        <TouchableOpacity style={style.postBtn} onPress={submitPhotoData}>
+                        <TouchableOpacity style={buttonStyle} onPress={submitPhotoData}>
                             <Text style={style.postBtnTitle}>Опублікувати</Text>
                         </TouchableOpacity>
                     </View>
