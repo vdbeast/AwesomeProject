@@ -22,6 +22,15 @@ const style = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     }, 
+    back_logo_wrapper: {
+        position: "absolute",
+        top: 53,
+        left: 10
+    },
+    back_logo: {
+        width: 24,
+        height: 24
+    },
     contentContainer: {
         backgroundColor: '#fff',
         paddingTop: 32,
@@ -49,6 +58,15 @@ const style = StyleSheet.create({
         justifyContent: 'center',
         marginBottom: 3
     },
+    photo_logo_wrapper: {
+        width: 60,
+        height: 60,
+        backgroundColor: "#fff",
+        borderRadius: "50%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+    },
     subtitle: {
         fontSize: 16,
         fontWeight: 400,
@@ -68,24 +86,48 @@ const style = StyleSheet.create({
         lineHeight: 19,
         letterSpacing: 0,
         textAlign: "left",
+        color: "rgba(33, 33, 33, 1)",
+        marginBottom: 14,
+    },
+    input_location: {
+        width: "100%",
+        height: 50,
+        borderBottomWidth: 1,
+        borderColor: "rgba(232, 232, 232, 1)",
+        fontSize: 16,
+        fontWeight: 400,
+        lineHeight: 19,
+        letterSpacing: 0,
+        textAlign: "left",
+        color: "rgba(33, 33, 33, 1)",
+        marginBottom: 14,
+        paddingLeft: 30
+    },
+    placeholder_icon: {
+        width: 24,
+        height: 24,
+        position: 'absolute',
+        left: 0,  
+        top: 10, 
+    },
+    placeholderText: {
         color: "rgba(189, 189, 189, 1)",
-        marginBottom: 14
     },
     postBtn: {
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#ff6c00',
-    borderRadius: 100,
-    width: 343,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: 20,
-    elevation: 3, // Забезпечує тінь (опціонально)
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.5,
-    shadowRadius: 3.84,
-},
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: '#ff6c00',
+        borderRadius: 100,
+        width: 343,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: 20,
+        elevation: 3,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3.84,
+    },
     postBtnTitle: {
         fontSize: 16,
         fontWeight: 400,
