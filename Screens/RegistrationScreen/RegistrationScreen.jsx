@@ -38,7 +38,7 @@ const RegistrationScreen = () => {
 
     const handleKeyboardHide = () => {
         setFocused('');
-        Keyboard.dismiss;
+        Keyboard.dismiss();
     }
 
     const toggleShowPassword = () => {

@@ -2,11 +2,12 @@ import { Image, Keyboard, KeyboardAvoidingView, Platform, Text, TouchableOpacity
 import style from './PostsScreen.styled'
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import FooterNav from "../../Components/FooterNav/FooterNav";
+import PhotoCardList from "../../Components/PhotoCardList/PhotoCardList";
 
 const PostsScreen = () => {
 
     const handleKeyboardHide = () => {
-        Keyboard.dismiss;
+        Keyboard.dismiss();
     }
 
     return (
@@ -34,6 +35,7 @@ const PostsScreen = () => {
                             <Text style={style.email}>email@example.com</Text>
                         </View>
                     </View>
+                    <PhotoCardList/>
                     <FooterNav />
                 </KeyboardAvoidingView>
             </View>

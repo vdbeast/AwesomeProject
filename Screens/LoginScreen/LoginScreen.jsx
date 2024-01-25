@@ -33,7 +33,7 @@ const LoginScreen = () => {
 
     const handleKeyboardHide = () => {
         setFocused('');
-        Keyboard.dismiss;
+        Keyboard.dismiss();
     }
 
     return (
