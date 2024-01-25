@@ -67,6 +67,17 @@ const style = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
+    camera: { 
+        flex: 1,
+        width: "100%"
+    },
+    photoView: {
+        flex: 1,
+        backgroundColor: "transparent",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%"
+    },
     subtitle: {
         fontSize: 16,
         fontWeight: 400,
